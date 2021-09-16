@@ -1,5 +1,5 @@
 # Minecraft Bedrock Server
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=KhanessKA&repo=github-readme-stats)](https://github.com/KhanessKA/Minecraft-Bedrock-Server)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=KhanessKA&repo=Minecraft-Bedrock-Server)](https://github.com/KhanessKA/Minecraft-Bedrock-Server)
 
 Run a bedrock server in a Docker container
 
