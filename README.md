@@ -1,9 +1,6 @@
 # Minecraft Bedrock Server
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=KhanessKA&repo=github-readme-stats)](https://github.com/KhanessKA/Minecraft-Bedrock-Server)
 
-  <p align="center">
-    <a href="https://github.com/anuraghazra/github-readme-stats/actions">
-      <img alt="Tests Passing" src="https://github.com/anuraghazra/github-readme-stats/workflows/Test/badge.svg" />
-    </a>
 Run a bedrock server in a Docker container
 
 This Dockerfile will download the Bedrock Server app and set it up, along with its dependencies.
