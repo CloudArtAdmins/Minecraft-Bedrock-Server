@@ -1,6 +1,7 @@
 FROM docker.io/library/debian:buster-slim
 
-RUN apt-get install -y unzip curl \
+RUN apt-get update \
+ && apt-get install -y unzip curl \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
