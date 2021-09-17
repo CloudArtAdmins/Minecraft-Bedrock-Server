@@ -1,8 +1,9 @@
-FROM ubuntu:bionic
+FROM docker.io/library/debian:buster-slim
 
 RUN apt-get update \
- && apt-get install -y unzip curl libcurl4 libssl1.0.0 \
- && apt-get clean 
+ && apt-get install -y unzip curl \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 RUN curl https://minecraft.azureedge.net/bin-linux/bedrock-server-1.16.220.02.zip --output bedrock-server.zip \ 
  && unzip bedrock-server.zip -d bedrock-server \
