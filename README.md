@@ -11,9 +11,11 @@ Here is a `podman run` command that will do that, assuming you have a `worlds` d
     $ podman run --detach \
 	--name=mc-bre \
 	-p 19132:19132/udp \
-	--volume "wills:/bedrock-server/worlds" \
-	--volume "${HOME}/.local/share/containers/storage/volumes/server.properties:/bedrock-server/server.properties:z" \
-	--volume "${HOME}/.local/share/containers/storage/volumes/whitelist.json:/bedrock-server/whitelist.json:z" \
+	-p 19133:19133/udp \
+	--volume "mc-bre-world:/bedrock-server/worlds" \
+	--volume "${PWD}/server.properties:/bedrock-server/server.properties:z,ro" \
+	--volume "${PWD}/whitelist.json:/bedrock-server/whitelist.json:z,ro" \
+	--volume "${PWD}/permissions.json:/bedrock-server/permissions.json:z,ro" \
 	docker.io/farrahscloudart/minecraft_bedrock_edition
 
 If you wanted to use custom resource packs, a whitelist, or other things, you could also mount those paths as well. Separating the content from the sever executable means that you can safely destroy your Docker container without losing your world. This will come in handy when there are updates to the server app, and you want to redeploy the container.
